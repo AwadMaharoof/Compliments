@@ -5,7 +5,7 @@ $(document).ready(
 
         var compliments = a.split(',');
         var compliment = compliments[Math.floor(Math.random() * compliments.length)];
-        $('body').html(compliment).text();
+        $('#compliment').html(compliment).text();
     });
 
 var success = function setBg(fileContents) {
