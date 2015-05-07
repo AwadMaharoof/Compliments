@@ -1,43 +1,29 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <title>Complimenter</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <style>
         body {
-            padding-top: 100px;
             font-family: 'Source Sans Pro', sans-serif;
-            width: 80%;
         }
-        
-        .footer {
-            position: absolute;
-            bottom: 0;
-            width: 99%;
+
+        .vertical-center {
+            min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+            display: flex;
+            align-items: center;
         }
-        
-        .right {
-            line-height: 35px;
-            float: right;
-        }
-        
+
         .normalText {
             font-size: 15px;
             font-weight: 100;
             color: #aaa;
         }
-        
+
         #reload {
-            position: fixed;
-            top: 90px;
             cursor: pointer;
-        }
-        
-        .reloadimg {
-            height: 16px;
-            vertical-align: middle;
-            padding-left: 2px;
         }
     </style>
     <link rel="stylesheet" href="css/slabtext.css" />
@@ -55,34 +41,49 @@
         ga('create', 'UA-60841941-1', 'auto');
         ga('send', 'pageview');
     </script>
-
 </head>
-
 <body>
-    <a href="https://github.com/awadmaharoof"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-    </a>
-    <h1 id="compliment"></h1>
-    <span id="reload" class="normalText">
-        <img src="img/reload.png" alt="Compliment me once more!" class="reloadimg" />
-        Compliment me once more!  
-    </span>
-    <footer class="footer normalText">
-        <a href="https://github.com/AwadMaharoof/Compliments" title="View on Github" target="_blank"><img src="img/GitHub-Mark.png" />
+    <div class="container">
+        <a href="https://github.com/awadmaharoof">
+            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
         </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="img/Facebook.png">
-        </a>
-        <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F&text=:%20http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F&via=big_roof" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('You deserve a compliment! Check out') + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="img/Twitter.png">
-        </a>
-        <a href="https://plus.google.com/share?url=http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="img/Google+.png">
-        </a>
-
-        <span class="right">
-            Special thanks to <a href="http://peoplearenice.blogspot.com/p/compliment-list.html">ilikeyourjacket.com</a> for the list of compliments
-        </span>
-    </footer>
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix vertical-center">
+                    <div class="col-md-12 column">
+                        <span id="reload" class="normalText">
+                            <img src="img/reload.png" alt="Compliment me once more!" class="reloadimg" />
+                            Compliment me once more!
+                        </span>
+                        <h1 id="compliment"></h1>
+                    </div>
+                </div>
+                <div class="row clearfix navbar-fixed-bottom">
+                    <div class="col-md-4 column">
+                        <a href="https://github.com/AwadMaharoof/Compliments" title="View on Github" target="_blank">
+                            <img src="img/GitHub-Mark.png" />
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                            <img src="img/Facebook.png">
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F&text=:%20http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F&via=big_roof" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent('You deserve a compliment! Check out') + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                            <img src="img/Twitter.png">
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A%2F%2Fawadmaharoof.github.io%2FCompliments%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">
+                            <img src="img/Google+.png">
+                        </a>
+                    </div>
+                    <div class="col-md-4 column">
+                    </div>
+                    <div class="col-md-4 column">
+                        Special thanks to <a href="http://peoplearenice.blogspot.com/p/compliment-list.html">ilikeyourjacket.com</a> for the list of compliments
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/slabtext.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
